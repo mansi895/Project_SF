@@ -10,7 +10,7 @@ data=json.loads(data)
 
 data_captured=[]
 df=pd.DataFrame(columns=["p1"])
-for data1 in data_bitcoin:
+for data1 in data:
     if data1 not in data_captured:
         data_captured.append(data1)
         api_data=requests.get(f'https://api.senticrypt.com/v1/history/{data1}')
